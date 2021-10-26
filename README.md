@@ -1,2 +1,2 @@
-# NTUBME-2021-DIP-Assignment
-NTUBME Principles and Applications of Digital Image Processing
+# NTUBME-2021-DIP-Assignments
+NTUBME Principles and Applications of Digital Image Processings
