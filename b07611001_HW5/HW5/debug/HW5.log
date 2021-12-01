@@ -1,0 +1,8 @@
+﻿  cvimage.cpp
+  hw5.cpp
+  main.cpp
+D:\Senior_fall\DIP\9\HW5\HW5\cvimage.cpp(9,6): warning C4189: 'b': 已初始化區域變數，但並未參考
+D:\Senior_fall\DIP\9\HW5\HW5\cvimage.cpp(16,9): warning C4189: 'a': 已初始化區域變數，但並未參考
+D:\Senior_fall\DIP\9\HW5\HW5\cvimage.cpp(49,6): warning C4189: 't': 已初始化區域變數，但並未參考
+  moc_hw5.cpp
+  HW5.vcxproj -> D:\Senior_fall\DIP\9\HW5\HW5\debug\HW5.exe
