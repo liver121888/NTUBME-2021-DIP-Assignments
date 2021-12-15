@@ -1,0 +1,4 @@
+﻿  cvimage.cpp
+D:\Senior_fall\DIP\11\HW6\b07611001_HW_6\HW6\cvimage.cpp(534,26): warning C4189: 'breakflag': 已初始化區域變數，但並未參考
+D:\Senior_fall\DIP\11\HW6\b07611001_HW_6\HW6\cvimage.cpp(533,25): warning C4189: 's': 已初始化區域變數，但並未參考
+  HW6.vcxproj -> D:\Senior_fall\DIP\11\HW6\b07611001_HW_6\HW6\debug\HW6.exe
