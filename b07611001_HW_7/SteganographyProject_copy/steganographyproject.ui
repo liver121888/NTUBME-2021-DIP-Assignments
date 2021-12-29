@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SteganographyProject</class>
+ <widget class="QMainWindow" name="SteganographyProject">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>908</width>
+    <height>647</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SteganographyProject</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>LSBStego</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QPushButton" name="btnLSBStegoOpen">
+            <property name="text">
+             <string>Open File</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_2" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="lblLSBMessage">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Hidden Message</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="pteLSB">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblLSBKey">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>AES Key</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="ldtLSBKey">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblLSBIV">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>CBC Iv</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="ldtLSBIV">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblLSBHexLength">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>HexLength:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnLSBStegoExecute">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>LSB Stego</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnLSBStegoExport">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Export Stego Image</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="5" column="1">
+           <widget class="QLabel" name="label_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>LSB of Stego Image</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QGraphicsView" name="grvStegoLSB0">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QGraphicsView" name="grvLSBOri">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QGraphicsView" name="grvOriLSB0">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Original Image</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QGraphicsView" name="grvLSBStego">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Stego Image</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="label_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>LSB of Original Image</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>DCTStego</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QPushButton" name="btnDCTStegoOpen">
+            <property name="text">
+             <string>Open File</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_3" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="lblDCTMessage">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Hidden Message</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="pteDCT">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblDCTKey">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>AES Key</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="ldtDCTKey">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblDCTIV">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>CBC Iv</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="ldtDCTIV">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblDCTHexLength">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>HexLength:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDCTStegoExecute">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>DCT Stego</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDCTStegoExport">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Export Stego Image</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>Stego Image</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QGraphicsView" name="grvDCTStego">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QGraphicsView" name="grvDCTOriSpect">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>Original Image</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QGraphicsView" name="grvDCTStegoSpect">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QGraphicsView" name="grvDCTOri">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>DFTStego</string>
+       </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>280</width>
+          <height>459</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QPushButton" name="btnDCTStegoOpen_2">
+           <property name="text">
+            <string>Open File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_4" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLabel" name="lblDCTMessage_2">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Hidden Message</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="pteDCT_2">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblDCTKey_2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="ldtDCTKey_2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maxLength">
+            <number>16</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblDCTIV_2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="ldtDCTIV_2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maxLength">
+            <number>16</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblDCTHexLength_2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>HexLength:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDCTStegoExecute_2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>DCT Stego</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDCTStegoExport_2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Export Stego Image</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>342</x>
+          <y>52</y>
+          <width>521</width>
+          <height>451</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_18">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_21">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QGraphicsView" name="grvDCTStego_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="label_22">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QGraphicsView" name="grvDCTOriSpect_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_23">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QGraphicsView" name="grvDCTStegoSpect_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QGraphicsView" name="grvDCTOri_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>DWTStego</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Stego Detection and Decryption</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QPushButton" name="btnStegoDetectOpen">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Open File</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QRadioButton" name="rbnLSB">
+               <property name="text">
+                <string>LSB</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rbnDCT">
+               <property name="text">
+                <string>DCT</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rbnDFT">
+               <property name="text">
+                <string>DFT</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_19">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>AES Key</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="ldtKeyDecrypt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_20">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>CBC Iv</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="ldtIVDecrypt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnStegoDecrypt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Decrypt</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Hidden Message</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="pteDecrypt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Stego Image</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Stego Image Histogram</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QGraphicsView" name="grvMainStegoDetect">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QGraphicsView" name="grvStegoDetectHist">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(83, 125, 125, 50);</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>908</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_FIle">
+   <property name="text">
+    <string>Open FIle</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
