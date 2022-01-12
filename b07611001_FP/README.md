@@ -17,37 +17,29 @@ Most of the research regarding steganography do not provide a user-friendly inte
 
 The user interface is quite straightforward (Figure 1): the user can use tab to switch between different steganography methods, and for the last part the user can examine a stego image or decrypt it. For the LSB stego part, the LSB plane of the original image and the stego image are extracted to show that the method works. The user can export the stego image in PNG format and send the image to others. The stego image looks indistinguishable in human eyes. After the stego process, hex length should not exceed allowed length, otherwise the message may lost. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.001.jpeg)
+![](./figures/1.png)
 
 Figure 2. User interface of LSB steganography. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.002.jpeg)
+![](./figures/2.png)
 
 Figure 2. User interface of DCT steganography. 
 
 For DWT steganography, the steganography process is visible to human eyes, future improvements are required. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.003.jpeg)
+![](./figures/3.png)
 
 Figure 3. User interface of DWT steganography. 
 
 For detection and decryption part, the user can choose the corresponding decrypting method to decrypt the hidden message, using the same key and IV as before. The user not only can see the histogram of the image to find anomaly, but also could do image subtraction to know that the image is a stego image. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.004.jpeg)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.005.png)
+![](./figures/4.png)![](./figures/5.png)
 
 Figure 4. User interface of steganography detection and decryption; the user can show the subtraction result at upper-right by holding the Image Subtraction button. 
 
 2. **Application block diagram** 
 
-`  `![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.006.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.007.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.008.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.009.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.010.png)  
-
-`   `![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.011.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.012.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.013.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.014.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.015.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.016.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.017.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.018.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.019.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.008.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.007.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.006.png)
-
-
-
-` `![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.020.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.021.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.022.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.015.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.013.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.012.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.011.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.014.png) ![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.023.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.024.png)![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.025.png)
-
-`  `![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.026.png)  
+![](./figures/block.png)
 
 The hidden message is first turn into hex, then embedded into the image. The stego image can later be decrypted to obtain the hidden message, or be examined by steganography detecting techniques. 
 
@@ -77,37 +69,37 @@ For steganography detection method, we propose image subtraction and histogram e
 
 The figure below shows the result of LSB steganography. We can see that stego image has noise in the embedded region, but the appearance of the image remain indistinguishable compared to the original image. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.027.jpeg)
+![](./figures/LSB embed.png)
 
 Figure 5. LSB steganography result. 
 
 The figure below shows the detection of LSB steganography. We can see that stego image has a lot of discrete jump in histogram, especially in R plane. At first we think the blue plane should be nosier, but we latter find out that because the R plane store the 2 LSB of hidden message, and it basically change when the parity of the number change, whereas the change in MSB in B plane is harder to achieve. On the right is the result of image subtraction. We can see the upper part of the image is corrupted by the hidden message. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.028.jpeg)
+![](./figures/LSBdetect.png)
 
 Figure 6. LSB steganography detection. 
 
 The figure below shows the result of DCT steganography. We use a 200\*200 image for better visualization of our coefficients modification. We can see at such scale, the stego image show some contour noise obviously. Besides, we can see the DCT result of images are different from others, because the embedding process may cause the energy of that blocks surge, so some blocks show high intensities. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.029.jpeg)
+![](./figures/DCT result.png)
 
 Figure 7. DCT steganography result. 
 
 For DCT steganography detection, the histogram is indistinguishable, but the subtraction method sees the difference obviously. If we zoom in the image, we should see the stego image is corrupted. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.030.jpeg)
+![](./figures/DCTdetect.png)
 
 Figure 8. DCT steganography detection. 
 
 For DWT steganography, the stego image is deteriorated so badly that the stego image is distinguishable in human eyes. Future study would concentrated at prevent this visibility. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.031.jpeg)
+![](./figures/DWTresult.png)
 
 Figure 9. DWT steganography result. 
 
 For DWT steganography detection, the histogram of stego image is deteriorated that the B channel of the image is zeroed. And the subtraction of images can see the R channel is embedded. But the encryption should keep the message safe. 
 
-![](./figures/Aspose.Words.bb852b0e-9178-4500-a6a2-7952b8d6f6d7.032.jpeg)
+![](./figures/DWTdetect.png)
 
 Figure 10. DCT steganography detection. 
 
