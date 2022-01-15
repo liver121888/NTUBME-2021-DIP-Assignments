@@ -19,11 +19,11 @@ The user interface is quite straightforward (Figure 1): the user can use tab to 
 
 ![](./figures/1.png)
 
-Figure 2. User interface of LSB steganography. 
+Figure 1. User interface of LSB steganography. 
 
 ![](./figures/2.png)
 
-Figure 3. User interface of DCT steganography. 
+Figure 2. User interface of DCT steganography. 
 
 For DWT steganography, the steganography process is visible to human eyes, future improvements are required. 
 
